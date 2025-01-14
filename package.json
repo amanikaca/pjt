@@ -8,7 +8,9 @@
     "start": "next start",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+
   },
   "dependencies": {
     "next": "15.1.4",
@@ -39,6 +41,7 @@
     "eslint-plugin-testing-library": "^7.1.1",
     "husky": "^9.1.7",
     "lint": "^0.8.19",
+    "lint-staged": "^15.3.0",
     "postcss": "^8",
     "prettier": "^3.4.2",
     "staged": "^0.0.0",
