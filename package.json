@@ -12,9 +12,8 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "next": "15.1.4",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -24,9 +23,13 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint-react/eslint-plugin": "^1.23.2",
     "@eslint/eslintrc": "^3",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
+    "@types/react-fontawesome": "^1.6.8",
     "eslint": "^9",
     "eslint-config-google": "^0.14.0",
     "eslint-config-next": "15.1.4",
