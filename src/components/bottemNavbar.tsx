@@ -2,7 +2,7 @@ import { Home, Calendar, User, HelpCircle, ClipboardList } from "lucide-react";
 
 const BottomNavBar = () => {
     return (
-        <nav className="fixed bottom-0 left-0 right-0 bg-background text-foreground shadow-md border-t border-gray-300 dark:border-gray-700 md:block lg:hidden">
+        <nav className="fixed bottom-0 left-0 right-0 bg-background text-foreground shadow-md border-t border-gray-300 dark:border-gray-700">
             <ul className="flex justify-around items-center py-2">
                 {/* Home */}
                 <li className="flex flex-col items-center">
