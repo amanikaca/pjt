@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -94,14 +95,20 @@ export default function AuthPage() {
           )}
         </form>
         <div className="mt-6">
-          <button className="flex w-full items-center justify-center rounded-lg bg-white py-2 text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <img
+          <button
+            type="button"
+            className="flex w-full items-center justify-center rounded-lg bg-white py-2 text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <Image
               src="https://www.google.com/favicon.ico"
               alt="Google"
-              className="mr-2 size-5 "
+              width={20}
+              height={20}
+              className="mr-2"
             />
             Continue with Google
           </button>
+
         </div>
         <div className="mt-4 text-center">
           <p className="text-sm">

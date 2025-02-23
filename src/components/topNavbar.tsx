@@ -14,9 +14,10 @@ const Header: React.FC<{ userName: string }> = ({ userName }) => {
 
       {/* User Icon */}
       <button
+        type="button"
         className="flex size-10 items-center justify-center rounded-full bg-purple-200 transition-colors hover:bg-purple-300 dark:bg-purple-800 dark:hover:bg-purple-700"
         title="User Profile"
-        onClick={() => console.log('Profile Clicked')}
+        onClick={() => console.warn('Profile Clicked')} // Changed to warn
         aria-label="Open user profile"
       >
         <FontAwesomeIcon
@@ -24,6 +25,7 @@ const Header: React.FC<{ userName: string }> = ({ userName }) => {
           className="size-5 text-purple-800 dark:text-purple-200"
         />
       </button>
+
     </div>
   );
 };

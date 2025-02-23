@@ -23,9 +23,9 @@ export const TimeTableDay = ({ day }: TimeTableDayProps) => {
         {day.day}
       </h3>
       <div className="flex-1 space-y-3">
-        {day.schedule.map((period, index) => (
+        {day.schedule.map((period) => (
           <div
-            key={index}
+            key={`${period.time}-${period.subject}`} // Unique composite key
             className="flex items-center justify-between rounded-lg bg-gray-700 p-3"
           >
             <span className="font-medium text-white">{period.time}</span>

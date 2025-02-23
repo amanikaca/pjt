@@ -28,9 +28,7 @@ export const QuickActions = () => {
         {/* Internal Links (Navigates Within App) */}
         <div className="flex gap-3">
           <Link href="/lost-and-found" legacyBehavior>
-            <a>
-              <QuickActionButton text="Lost & Found" />
-            </a>
+            <QuickActionButton text="Lost & Found" />
           </Link>
           <QuickActionButton
             text="SGPA Calculator"

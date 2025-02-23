@@ -31,6 +31,7 @@ export const TimeTableSlider = ({
 
       {/* Left Navigation Button */}
       <button
+        type="button" // Fixed missing type
         onClick={onPrevDay}
         disabled={currentDay <= 0}
         className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 opacity-0 transition-opacity disabled:opacity-50 group-hover:opacity-100"
@@ -40,6 +41,7 @@ export const TimeTableSlider = ({
 
       {/* Right Navigation Button */}
       <button
+        type="button" // Fixed missing type
         onClick={onNextDay}
         disabled={currentDay >= timetableData.length - 1}
         className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 opacity-0 transition-opacity disabled:opacity-50 group-hover:opacity-100"
@@ -49,14 +51,13 @@ export const TimeTableSlider = ({
 
       {/* Pagination Indicators */}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-2">
-        {timetableData.map((_, index) => (
+        {timetableData.map((day, index) => (
           <div
-            key={index}
+            key={day.day} // Use 'day.day' instead of index if it's unique
             className={`size-2 rounded-full ${
               currentDay === index ? 'bg-white' : 'bg-white/50'
             }`}
-          >
-          </div>
+          />
         ))}
       </div>
     </div>
