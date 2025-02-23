@@ -133,7 +133,8 @@ export default function AddEventDetails() {
           />
           {eventDetails.image && (
             <p className="mt-2 text-gray-200">
-              Selected: <br />
+              Selected:
+              <br />
               {eventDetails.image.name}
             </p>
           )}

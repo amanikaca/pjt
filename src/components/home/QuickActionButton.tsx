@@ -13,6 +13,7 @@ export const QuickActionButton: React.FC<QuickActionButtonProps> = ({
 }) => {
   return (
     <button
+      type="button"
       className="flex-1 rounded-xl bg-white py-4 text-sm font-medium text-black"
       onClick={onClick}
     >

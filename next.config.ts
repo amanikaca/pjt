@@ -3,7 +3,7 @@ import withPWA from 'next-pwa';
 const nextConfig = {
   reactStrictMode: true, // ✅ Keep it outside of withPWA
   eslint: {
-    ignoreDuringBuilds: true, // ✅ Ignores ESLint errors during 'next build'
+    ignoreDuringBuilds: false, // ✅ Ignores ESLint errors during 'next build'
   },
 };
 

@@ -27,7 +27,6 @@ export default function AddEventDetails() {
   // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Event Details:', eventDetails);
     // Add form submission logic (e.g., API call)
   };
 
