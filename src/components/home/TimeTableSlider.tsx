@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { TimeTableDay } from "./TimeTableDay";
-import { timetableData } from "./TimeTableData";
-import { DayData } from "@/types/types" // Ensure you import the correct type
+import type { DayData } from '@/types/types'; // Ensure you import the correct type
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { timetableData } from './TimeTableData';
+import { TimeTableDay } from './TimeTableDay';
 
-interface TimeTableSliderProps {
+type TimeTableSliderProps = {
   currentDay: number;
   onPrevDay: () => void;
   onNextDay: () => void;
-}
+};
 
 // Default empty schedule to prevent errors
-const defaultDayData: DayData = { day: "No Data", schedule: [] };
+const defaultDayData: DayData = { day: 'No Data', schedule: [] };
 
 export const TimeTableSlider = ({
   currentDay,
@@ -24,8 +24,8 @@ export const TimeTableSlider = ({
   const currentDayData: DayData = timetableData[currentDay] ?? defaultDayData;
 
   return (
-    <div className="relative h-full group">
-      <div className="h-full rounded-lg overflow-hidden">
+    <div className="group relative h-full">
+      <div className="h-full overflow-hidden rounded-lg">
         <TimeTableDay day={currentDayData} />
       </div>
 
@@ -33,29 +33,30 @@ export const TimeTableSlider = ({
       <button
         onClick={onPrevDay}
         disabled={currentDay <= 0}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-50"
+        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 opacity-0 transition-opacity disabled:opacity-50 group-hover:opacity-100"
       >
-        <ChevronLeft className="w-5 h-5 text-white" />
+        <ChevronLeft className="size-5 text-white" />
       </button>
 
       {/* Right Navigation Button */}
       <button
         onClick={onNextDay}
         disabled={currentDay >= timetableData.length - 1}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-50"
+        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 opacity-0 transition-opacity disabled:opacity-50 group-hover:opacity-100"
       >
-        <ChevronRight className="w-5 h-5 text-white" />
+        <ChevronRight className="size-5 text-white" />
       </button>
 
       {/* Pagination Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-2">
         {timetableData.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full ${
-              currentDay === index ? "bg-white" : "bg-white/50"
+            className={`size-2 rounded-full ${
+              currentDay === index ? 'bg-white' : 'bg-white/50'
             }`}
-          ></div>
+          >
+          </div>
         ))}
       </div>
     </div>

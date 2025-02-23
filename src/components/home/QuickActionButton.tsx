@@ -1,20 +1,22 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
-interface QuickActionButtonProps {
+type QuickActionButtonProps = {
   text: string;
   onClick?: () => void; // Ensure `onClick` is optional
-}
+};
 
-export const QuickActionButton: React.FC<QuickActionButtonProps> = ({ text, onClick }) => {
+export const QuickActionButton: React.FC<QuickActionButtonProps> = ({
+  text,
+  onClick,
+}) => {
   return (
-    <button 
-      className="flex-1 bg-white text-black py-4 rounded-xl text-sm font-medium" 
-      onClick={onClick} 
+    <button
+      className="flex-1 rounded-xl bg-white py-4 text-sm font-medium text-black"
+      onClick={onClick}
     >
       {text}
     </button>
   );
 };
-

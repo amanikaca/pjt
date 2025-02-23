@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(false);
@@ -9,17 +9,17 @@ export default function AuthPage() {
     setIsLogin(!isLogin);
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#121826]">
-      <div className="bg-[#121826] p-8 rounded-lg shadow-lg w-full max-w-md">
-        <div className="bg-black w-[80%] mx-auto rounded-3xl mb-6 p-1 flex items-center transition-all duration-300 ease-in-out">
+    <div className="flex min-h-screen items-center justify-center bg-[#121826]">
+      <div className="w-full max-w-md rounded-lg bg-[#121826] p-8 shadow-lg">
+        <div className="mx-auto mb-6 flex w-4/5 items-center rounded-3xl bg-black p-1 transition-all duration-300 ease-in-out">
           <button
             onClick={toggleForm}
             type="button"
             aria-label="Switch to Sign Up"
-            className={`flex-1 text-xl font-bold rounded-3xl text-center p-2 transition-all duration-300 ease-in-out ${
+            className={`flex-1 rounded-3xl p-2 text-center text-xl font-bold transition-all duration-300 ease-in-out ${
               !isLogin
-                ? "bg-white text-black"
-                : "bg-transparent text-white text-opacity-65 hover:text-opacity-100"
+                ? 'bg-white text-black'
+                : 'bg-transparent text-white text-opacity-65 hover:text-opacity-100'
             }`}
           >
             Sign Up
@@ -28,70 +28,77 @@ export default function AuthPage() {
             onClick={toggleForm}
             type="button"
             aria-label="Switch to Login"
-            className={`flex-1 text-xl font-bold rounded-3xl text-center p-2 transition-all duration-300 ease-in-out ${
+            className={`flex-1 rounded-3xl p-2 text-center text-xl font-bold transition-all duration-300 ease-in-out ${
               isLogin
-                ? "bg-white text-black"
-                : "bg-transparent text-white text-opacity-65 hover:text-opacity-100"
+                ? 'bg-white text-black'
+                : 'bg-transparent text-white text-opacity-65 hover:text-opacity-100'
             }`}
           >
             Login
           </button>
         </div>
         <form>
-          {isLogin && <div className="mb-4">
-            <label className="block text-sm font-medium mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-            />
-          </div>}
-         { isLogin && <div className="mb-4">
-            <label
-              className="block text-sm font-medium mb-2"
-              htmlFor="password"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
-            />
-          </div>}
-          
-         
-         {isLogin && <div className="flex items-center justify-between my-4">
-            <div className="flex items-center">
-              <input type="checkbox" id="rememberMe" className="mr-2" />
-              <label htmlFor="rememberMe" className="text-sm">
-                Remember me
+          {isLogin && (
+            <div className="mb-4">
+              <label className="mb-2 block text-sm font-medium" htmlFor="email">
+                Email
               </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your email"
+              />
             </div>
-            <Link
-              href="/login"
-              className="text-sm text-blue-500 hover:underline"
+          )}
+          {isLogin && (
+            <div className="mb-4">
+              <label
+                className="mb-2 block text-sm font-medium"
+                htmlFor="password"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your password"
+              />
+            </div>
+          )}
+
+          {isLogin && (
+            <div className="my-4 flex items-center justify-between">
+              <div className="flex items-center">
+                <input type="checkbox" id="rememberMe" className="mr-2" />
+                <label htmlFor="rememberMe" className="text-sm">
+                  Remember me
+                </label>
+              </div>
+              <Link
+                href="/login"
+                className="text-sm text-blue-500 hover:underline"
+              >
+                Forgot Password?
+              </Link>
+            </div>
+          )}
+          {isLogin && (
+            <button
+              type="submit"
+              className="w-full rounded-lg bg-blue-500 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              Forgot Password?
-            </Link>
-          </div>}
-          {isLogin && <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Login
-          </button>}
+              Login
+            </button>
+          )}
         </form>
         <div className="mt-6">
-          <button className="w-full flex items-center justify-center bg-white text-black py-2 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button className="flex w-full items-center justify-center rounded-lg bg-white py-2 text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <img
               src="https://www.google.com/favicon.ico"
               alt="Google"
-              className="w-5 h-5 mr-2 "
+              className="mr-2 size-5 "
             />
             Continue with Google
           </button>
@@ -99,21 +106,21 @@ export default function AuthPage() {
         <div className="mt-4 text-center">
           <p className="text-sm">
             {isLogin
-              ? `Don't have an account?${" "}`
-              : `Already have an account?${" "}`}
+              ? `Don't have an account?${' '}`
+              : `Already have an account?${' '}`}
             <Link
               href="/login"
               className="text-blue-500 hover:underline "
               onClick={toggleForm}
             >
-              {!isLogin ? "Log in" : "Sign up"}
+              {!isLogin ? 'Log in' : 'Sign up'}
             </Link>
           </p>
         </div>
         <div className="mt-4 text-center text-sm text-gray-600">
           {!isLogin
-            ? "Use GEC PKD Gmail To Sign Up"
-            : "Use GEC PKD Gmail To Log in"}
+            ? 'Use GEC PKD Gmail To Sign Up'
+            : 'Use GEC PKD Gmail To Log in'}
         </div>
       </div>
     </div>

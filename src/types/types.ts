@@ -1,11 +1,11 @@
-export interface DayData {
+export type DayData = {
   day: string;
   schedule: { time: string; subject: string }[];
-}
+};
 
 export type TimeTableData = DayData[];
 
-export interface ItemType {
+export type ItemType = {
   id: string;
   name: string;
   description?: string;
@@ -14,4 +14,4 @@ export interface ItemType {
   images: string[];
   found: boolean;
   createdAt: Date;
-}
+};
