@@ -11,17 +11,17 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#000000',
-    icons: [
-      {
-        src: '@/public/icons/INVENTO.jpg',
-        sizes: '192x192',
-        type: 'image/jpeg',
-      },
-      {
-        src: '@/public/icons/INVENTO.jpg',
-        sizes: '512x512',
-        type: 'image/jpeg',
-      },
-    ],
+    // icons: [
+    //   {
+    //     src: '@/public/icons/INVENTO.jpg',
+    //     sizes: '192x192',
+    //     type: 'image/jpeg',
+    //   },
+    //   {
+    //     src: '@/public/icons/INVENTO.jpg',
+    //     sizes: '512x512',
+    //     type: 'image/jpeg',
+    //   },
+    // ],
   };
 }

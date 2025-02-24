@@ -99,7 +99,7 @@ export default function LostFound() {
       ))}
 
       {/* Floating "+" Button */}
-      <Link href="/lost/add">
+      <Link href="/lost-found/add">
         <button className="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors">
           +
         </button>

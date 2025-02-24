@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import React from 'react';
-import { QuickActionButton } from './QuickActionButton';
+import Link from "next/link";
+import React from "react";
+import { QuickActionButton } from "../QuickActionButton";
 
 export const QuickActions = () => {
   return (
@@ -17,10 +17,11 @@ export const QuickActions = () => {
             text="College Login"
             onClick={() =>
               window.open(
-                'https://gecskp.etlab.in/user/login',
-                '_blank',
-                'noopener,noreferrer',
-              )}
+                "https://gecskp.etlab.in/user/login",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           />
           <QuickActionButton text="Bus Time" />
         </div>
@@ -34,19 +35,21 @@ export const QuickActions = () => {
             text="SGPA Calculator"
             onClick={() =>
               window.open(
-                'https://ktugpa.web.app/',
-                '_blank',
-                'noopener,noreferrer',
-              )}
+                "https://ktugpa.web.app/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           />
           <QuickActionButton
             text="Hackathon"
             onClick={() =>
               window.open(
-                'https://codecompasss.github.io/code_compass_india/repeto',
-                '_blank',
-                'noopener,noreferrer',
-              )}
+                "https://codecompasss.github.io/code_compass_india/repeto",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           />
         </div>
 
@@ -66,19 +69,21 @@ export const QuickActions = () => {
             text="Scholarships"
             onClick={() =>
               window.open(
-                'https://codecompasss.github.io/code_compass_india/repeto',
-                '_blank',
-                'noopener,noreferrer',
-              )}
+                "https://codecompasss.github.io/code_compass_india/repeto",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           />
           <QuickActionButton
             text="Project showcase"
             onClick={() =>
               window.open(
-                'https://codecompasss.github.io/gecian_archive/',
-                '_blank',
-                'noopener,noreferrer',
-              )}
+                "https://codecompasss.github.io/gecian_archive/",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           />
         </div>
       </div>
