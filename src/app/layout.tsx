@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import BottomNavBar from '@/components/bottemNavbar';
 import TopNavBar from '@/components/topNavbar';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -14,10 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Student App',
-  description: 'An App For GEC Students',
-};
+
 
 export default function RootLayout({
   children,
@@ -27,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/manifest.json" />
+        {/* <link rel="manifest" href="/manifest.ts" /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
