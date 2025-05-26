@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "check-types": "tsc --noEmit"
+    "start": "next start"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",
@@ -19,48 +15,19 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.14.0",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@eslint-react/eslint-plugin": "^1.23.2",
-    "@eslint/eslintrc": "^3",
+    
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@types/next-pwa": "^5.6.9",
+  
     "@types/node": "^20",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
     "@types/react-fontawesome": "^1.6.8",
-    "eslint": "^9",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-next": "15.1.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-format": "^1.0.1",
-    "eslint-plugin-jest-dom": "^5.5.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-next": "^0.0.0",
-    "eslint-plugin-playwright": "^2.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react-refresh": "^0.4.18",
-    "eslint-plugin-tailwindcss": "^3.17.5",
-    "eslint-plugin-testing-library": "^7.1.1",
-    "husky": "^9.1.7",
-    "lint": "^0.8.19",
-    "lint-staged": "^15.3.0",
     "postcss": "^8",
-    "prettier": "^3.4.2",
-    "staged": "^0.0.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint . --fix"
-    ],
-    "**/*.{html,json,css,scss,md}": [
-      "prettier --write"
-    ]
   }
+  
 }
+

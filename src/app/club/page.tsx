@@ -1,3 +1,4 @@
+//replace with club buttons and stuff accroding to design
 import { BusButtons } from "@/components/Bus/busButton";
 
 const busData = [

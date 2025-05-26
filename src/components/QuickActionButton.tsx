@@ -4,7 +4,8 @@ import React from 'react';
 
 type QuickActionButtonProps = {
   text: string;
-  onClick?: () => void; // Ensure `onClick` is optional
+  onClick?: () => void;
+  className?: string;  // Ensure `onClick` is optional
 };
 
 export const QuickActionButton: React.FC<QuickActionButtonProps> = ({

@@ -23,7 +23,6 @@ export const BusButtons = ({ buses }: { buses: BusData[] }) => {
               <Link href={`/bus/${bus.slug}`}>
                 <QuickActionButton
                   text={bus.name}
-                  className="w-full py-3 text-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors rounded-lg shadow-md"
                 />
               </Link>
             </div>
