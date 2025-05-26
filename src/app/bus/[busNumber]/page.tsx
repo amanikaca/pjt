@@ -7,22 +7,32 @@
 // This approach avoids creating multiple static pages and keeps the code DRY.
 // app/bus/[busNumber]/page.tsx
 
+// src/app/bus/[busNumber]/page.tsx
+interface BusPageProps {
+  params: {
+    busNumber: string;
+  };
+}
+
+// This generates static pages for known bus numbers at build time
 export async function generateStaticParams() {
   return [
     { busNumber: '1' },
     { busNumber: '2' },
     { busNumber: '3' },
-    // Add more known bus numbers here
+    { busNumber: '4' },
+    { busNumber: '5' },
+    { busNumber: '6' },
   ];
 }
 
-export default function BusPage({ params }: { params: { busNumber: string } }) {
+// This is the dynamic page that receives the busNumber from the URL
+export default function BusPage({ params }: BusPageProps) {
   return (
-    <div>
-      <h1>Bus Number: {params.busNumber}</h1>
-      <p>
-        In this dynamic page, the UI/UX remains consistent across all buses, but
-        the content updates based on the bus number.
+    <div className="p-4">
+      <h1 className="text-2xl font-bold">Bus Number: {params.busNumber}</h1>
+      <p className="mt-2">
+        This is a dynamic page. The layout is consistent, but the content changes based on the bus number.
       </p>
     </div>
   );
