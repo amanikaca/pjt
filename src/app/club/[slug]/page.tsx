@@ -1,13 +1,27 @@
-export default function Home() {
+// app/bus/[busNumber]/page.tsx
+
+
+export async function generateStaticParams() {
+  return [
+    { slug: '1' },
+    { slug: '2' },
+    { slug: '3' },
+    // Add more known slugs/bus numbers
+  ];
+}
+
+export default function BusPage({ params }: { params: { slug: string } }) {
   return (
     <div>
+      <h1>Bus Number: {params.slug}</h1>
       <p>
-        In this dynamic page, when you click any club button, the UI/UX for all club  remains the same. 
-        We use a dynamic page system so that clicking on
+        In this dynamic page, the UI/UX remains consistent across all buses, but
+        the content updates based on the bus number.
       </p>
     </div>
   );
 }
+
 
 // import { notFound } from 'next/navigation';
 
