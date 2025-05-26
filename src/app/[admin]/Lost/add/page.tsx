@@ -1,3 +1,4 @@
+
 'use client';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -21,11 +22,16 @@ export default function AddItemPage() {
     };
 
     // Save to local storage (for demonstration purposes)
-    const existingItems = JSON.parse(localStorage.getItem("lostFoundItems") || [];
-    localStorage.setItem(
-      "lostFoundItems",
-      JSON.stringify([...existingItems, newItem])
-    );
+  // Get the existing items or default to an empty array
+  const existingItemsString = localStorage.getItem("lostFoundItems");
+  const existingItems = existingItemsString ? JSON.parse(existingItemsString) : [];
+
+  // Add the new item and save back to local storage
+  localStorage.setItem(
+    "lostFoundItems",
+    JSON.stringify([...existingItems, newItem])
+  );
+
 
     // Redirect back to the LostFound page
     router.push("/lost-found");
