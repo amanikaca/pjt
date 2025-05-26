@@ -5,39 +5,17 @@
 // but the content (bus location details) changes dynamically
 // based on which bus was selected.
 // This approach avoids creating multiple static pages and keeps the code DRY.
-// app/bus/[busNumber]/page.tsx
-
-// src/app/bus/[busNumber]/page.tsx
-interface BusPageProps {
-  params: {
-    busNumber: string;
-  };
-}
-
-// This generates static pages for known bus numbers at build time
-export async function generateStaticParams() {
-  return [
-    { busNumber: '1' },
-    { busNumber: '2' },
-    { busNumber: '3' },
-    { busNumber: '4' },
-    { busNumber: '5' },
-    { busNumber: '6' },
-  ];
-}
-
-// This is the dynamic page that receives the busNumber from the URL
-export default function BusPage({ params }: BusPageProps) {
+export default function Home() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">Bus Number: {params.busNumber}</h1>
-      <p className="mt-2">
-        This is a dynamic page. The layout is consistent, but the content changes based on the bus number.
+    <div>
+      <p>
+        In this dynamic page, when you click any bus button, the UI/UX for all bus locations remains the same. 
+        We use a dynamic page system so that clicking on, for example, the "Bus 1" button redirects here, 
+        but the displayed content updates to show the respective bus's location.
       </p>
     </div>
   );
 }
-
 
 
 // src/app/bus/[busNumber]/page.tsx
