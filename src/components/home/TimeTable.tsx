@@ -12,8 +12,9 @@ export const TimeTableBlock = () => {
     setCurrentDay((prev) => (prev === 0 ? 4 : prev - 1));
   };
   return (
-    <div className="border border-[var(--text)] rounded-lg p-4">
-      <h2 className="mb-3 text-lg font-semibold text-[var(--text)]  inline-block w-[300px] shrink-0">
+    <div className="border border-[var(--text)] rounded-lg p-4 ">
+      <img className="absolute h-16" src="/scribble-circle.svg" />
+      <h2 className="flex ml-2 p-3 w-fit text-[2rem] font-medium text-[var(--text)]">
         Time Table
       </h2>
       <div className="flex h-[calc(100%-2rem)] rounded-xl flex-nowrap overflow-x-auto space-x-4">

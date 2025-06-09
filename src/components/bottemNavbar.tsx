@@ -1,5 +1,4 @@
-import { Book, Calendar, Calendar2, Home2, Money } from "iconsax-react";
-import { ReceiptIndianRupee } from "lucide-react";
+import { Book, Calendar2, Home2, Money } from "iconsax-react";
 
 const BottomNavBar = () => {
   return (
