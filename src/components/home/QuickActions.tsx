@@ -4,8 +4,8 @@ import { QuickActionButton } from "../QuickActionButton";
 
 export const QuickActions = () => {
   return (
-    <div className="pt-8 w-full space-y-4 md:mt-0 md:flex md:h-full md:w-1/2 md:flex-col">
-      <div className="space-y-4 md:flex md:flex-1 md:flex-col md:justify-between">
+    <div className="pt-8 w-full space-y-4 md:mt-0 md:flex md:h-full md:w-1/2 md:flex-col md:justify-center">
+      <div className="space-y-4 md:flex md:flex-1 md:flex-col md:justify-center">
         {/* External Links */}
         <div className="flex gap-3">
           <QuickActionButton

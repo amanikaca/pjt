@@ -13,7 +13,11 @@ export const TimeTableBlock = () => {
   };
   return (
     <div className="border border-[var(--text)] rounded-lg p-4 ">
-      <img className="absolute h-16" src="/scribble-circle.svg" />
+      <img
+        className="absolute h-16"
+        src="/scribble-circle.svg"
+        alt="Scribbled circle overlay"
+      />
       <h2 className="flex ml-2 p-3 w-fit text-[2rem] font-medium text-[var(--text)]">
         Time Table
       </h2>
