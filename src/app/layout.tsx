@@ -1,4 +1,4 @@
-import BottomNavBar from "@/components/bottemNavbar";
+import BottomNavBar from "@/components/bottomNavbar";
 import TopNavBar from "@/components/topNavbar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";

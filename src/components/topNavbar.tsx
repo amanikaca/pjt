@@ -3,11 +3,20 @@
 import { User } from "iconsax-react";
 import React from "react";
 
+function isValidSemester(semester: number) {
+  return semester >= 1 && semester <= 8 && Number.isInteger(semester);
+}
+
 const Header: React.FC<{
-  userName: string;
-  semester: number;
-  department: string;
+  userName?: string | null;
+  semester?: number | null;
+  department?: string | null;
 }> = ({ userName, semester, department }) => {
+  const displaySemester =
+    semester !== undefined && semester !== null && isValidSemester(semester)
+      ? `S${semester}, `
+      : "";
+
   return (
     <div className="flex items-center justify-between px-4 py-7 bg-gradient-to-b from-transparent to-20% to-[var(--main)] shadow-[0_8px_20px_10px_var(--main)]">
       <div className="flex max-w-7xl w-full justify-between mx-auto">
@@ -17,7 +26,8 @@ const Header: React.FC<{
             Hello, <span className="font-bold">{userName || "Guest"}</span>
           </p>
           <p className="truncate text-md text-foreground">
-            {semester && "S" + String(semester) + ","} {department || "CSE"}
+            {displaySemester}
+            {department && department}
           </p>
         </div>
 

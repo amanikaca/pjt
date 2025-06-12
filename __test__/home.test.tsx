@@ -3,9 +3,9 @@ import "@testing-library/jest-dom";
 import ResponsiveDashboard from "@/components/home/ResponsiveDashboard";
 
 describe("ResponsiveDashboard", () => {
-  // beforeEach(() => {
-  //   jest.clearAllMocks();
-  // });
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
 
   it("renders without crashing", () => {
     render(<ResponsiveDashboard />);
