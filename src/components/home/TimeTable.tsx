@@ -12,7 +12,10 @@ export const TimeTableBlock = () => {
     setCurrentDay((prev) => (prev === 0 ? 4 : prev - 1));
   };
   return (
-    <div className="border border-[var(--text)] rounded-lg p-4 ">
+    <div
+      className="border border-[var(--text)] rounded-lg p-4 "
+      data-testid="timetable-block"
+    >
       <img
         className="absolute h-16"
         src="/scribble-circle.svg"
