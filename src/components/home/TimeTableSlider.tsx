@@ -24,7 +24,7 @@ export const TimeTableSlider = ({
   const currentDayData: DayData = timetableData[currentDay] ?? defaultDayData;
 
   return (
-    <div className="group relative h-full w-full">
+    <div className="group relative h-fit w-full">
       <div className="h-full overflow-hidden rounded-lg">
         <TimeTableDay day={currentDayData} />
       </div>
@@ -55,7 +55,7 @@ export const TimeTableSlider = ({
           <div
             key={day.day} // Use 'day.day' instead of index if it's unique
             className={`size-2 rounded-full ${
-              currentDay === index ? "bg-white" : "bg-white/50"
+              currentDay === index ? "bg-black" : "bg-black/50"
             }`}
           />
         ))}

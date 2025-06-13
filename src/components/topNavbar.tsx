@@ -19,7 +19,7 @@ const Header: React.FC<{
 
   return (
     <div className="flex items-center justify-between px-4 py-7 bg-gradient-to-b from-transparent to-20% to-[var(--main)] shadow-[0_8px_20px_10px_var(--main)]">
-      <div className="flex max-w-7xl w-full justify-between mx-auto">
+      <div className="flex max-w-[var(--max-screen-size)] w-full justify-between mx-auto">
         {/* User Name */}
         <div className="flex flex-col">
           <p className="truncate text-2xl text-foreground">

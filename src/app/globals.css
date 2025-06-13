@@ -9,6 +9,8 @@
     --main: #17c6fa;
 
     --text: black;
+
+    --max-screen-size: 2700px;
 }
 
 /* Commented out as it doesn't fit with current theme */

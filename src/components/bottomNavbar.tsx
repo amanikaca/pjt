@@ -2,7 +2,7 @@ import { Book, Calendar2, Home2, Money } from "iconsax-react";
 
 const BottomNavBar = () => {
   return (
-    <nav className="fixed left-6 right-6 bottom-8 border-t border-gray-300 bg-[var(--main)] text-foreground rounded-2xl">
+    <nav className="fixed left-6 right-6 bottom-8 border-t border-gray-300 bg-[var(--main)] max-w-[var(--max-screen-size)] mx-auto text-foreground rounded-2xl">
       <ul className="flex items-center justify-around py-2">
         {/* Home */}
         <li className="flex flex-col items-center">
