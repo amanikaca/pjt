@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { signInWithGoogle } from "@/lib/firebase/auth";
 import { useRouter } from "next/navigation";
