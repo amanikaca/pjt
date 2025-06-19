@@ -3,7 +3,7 @@
 'use client';
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowBigLeft, ArrowLeftIcon, Filter } from "lucide-react";
+import {  ArrowLeftIcon, Filter } from "lucide-react";
 
 
 // Define the type for an item
