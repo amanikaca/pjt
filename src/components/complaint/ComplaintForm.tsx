@@ -18,22 +18,28 @@ export default function ComplaintForm() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    if (!title.trim() || !description.trim() || !place.trim() || !image) {
+      alert('Please fill in all fields and upload an image.');
+      return;
+    }
+
     console.log({ title, description, place, image });
     alert('Complaint submitted successfully!');
-    // 🔧 Here you can add backend logic or state updates
+    // 🔧 You can add backend logic here (e.g., upload to a server or database)
   };
 
   return (
     <form className="mt-4 space-y-4" onSubmit={handleSubmit}>
       {/* Image Upload Section */}
       <div className="border rounded-lg p-4 text-center bg-gray-100">
-        {previewUrl ? (
+        {previewUrl && (
           <img
             src={previewUrl}
             alt="Preview"
             className="mx-auto w-full max-w-xs h-40 object-cover rounded mb-2"
           />
-        ) : null}
+        )}
         <label className="cursor-pointer underline text-gray-700">
           Upload Image
           <input
@@ -46,32 +52,38 @@ export default function ComplaintForm() {
       </div>
 
       {/* Title Field */}
-      <label>Title </label>
+      <label htmlFor="title">Title</label>
       <input
+        id="title"
         type="text"
         placeholder="Title Name"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         className="w-full border p-2 rounded"
+        required
       />
 
       {/* Description Field */}
-      <label>Description</label>
+      <label htmlFor="description">Description</label>
       <textarea
+        id="description"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         className="w-full border p-2 rounded"
+        required
       />
 
       {/* Place Field */}
-      <label>Place</label>
+      <label htmlFor="place">Place</label>
       <input
+        id="place"
         type="text"
         placeholder="Place"
         value={place}
         onChange={(e) => setPlace(e.target.value)}
         className="w-full border p-2 rounded"
+        required
       />
 
       {/* Submit Button */}
